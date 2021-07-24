@@ -23,7 +23,4 @@ public class Controller {
         User user = new User(email, password);
         users.add(user);
     }
-
-    
-
 }
