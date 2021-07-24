@@ -1,4 +1,4 @@
-public class Student {
+public class Student extends User {
         private String studentName;
         private String studentLastname;
         private String course;
@@ -6,7 +6,9 @@ public class Student {
         private Integer age;
         private Integer studentyear;
 
-        public Student(String studentName, String studentLastname, String course, Long studentid, Integer age, Integer studentyear) {
+
+        public Student(String studentName, String studentLastname, String course, Long studentid, Integer age, Integer studentyear,String email,String password) {
+            super(email,password);
             this.studentName = studentName;
             this.studentLastname = studentLastname;
             this.course = course;
