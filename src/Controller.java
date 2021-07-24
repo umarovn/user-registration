@@ -25,10 +25,10 @@ public class Controller {
         users.add(user);
     }
 
-    private void printUsers(){
-        for (User user:users) {
+
+    private void printUsers() {
+        for (User user : users) {
             System.out.println(user);
         }
     }
-
 }
