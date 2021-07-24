@@ -1,22 +1,25 @@
-public class Student {
+public class Student extends User {
+
         private String studentName;
         private String studentLastname;
         private String course;
-        private Long studentid;
+        private Long studentId;
         private Integer age;
-        private Integer studentyear;
-
-        public Student(String studentName, String studentLastname, String course, Long studentid, Integer age, Integer studentyear) {
-            this.studentName = studentName;
-            this.studentLastname = studentLastname;
-            this.course = course;
-            this.studentid = studentid;
-            this.age = age;
-            this.studentyear = studentyear;
-        }
+        private Integer studentYear;
 
 
-        public String getStudentName() {
+
+    public Student(String email, String password, String studentName, String studentLastname, String course, Long studentId, Integer age, Integer studentYear) {
+        super(email, password);
+        this.studentName = studentName;
+        this.studentLastname = studentLastname;
+        this.course = course;
+        this.studentId = studentId;
+        this.age = age;
+        this.studentYear = studentYear;
+    }
+
+    public String getStudentName() {
             return studentName;
         }
 
@@ -40,12 +43,12 @@ public class Student {
             this.course = course;
         }
 
-        public Long getStudentid() {
-            return studentid;
+        public Long getStudentId() {
+            return studentId;
         }
 
-        public void setStudentid(Long studentid) {
-            this.studentid = studentid;
+        public void setStudentId(Long studentId) {
+            this.studentId = studentId;
         }
 
         public Integer getAge() {
@@ -56,23 +59,23 @@ public class Student {
             this.age = age;
         }
 
-        public Integer getStudentyear() {
-            return studentyear;
+        public Integer getStudentYear() {
+            return studentYear;
         }
 
-        public void setStudentyear(Integer studentyear) {
-            this.studentyear = studentyear;
+        public void setStudentYear(Integer studentYear) {
+            this.studentYear = studentYear;
         }
 
         @Override
         public String toString() {
             return "Student{" +
-                    "studentName='" + studentName + '\'' +
-                    ", studentLastname='" + studentLastname + '\'' +
-                    ", course='" + course + '\'' +
-                    ", studentid=" + studentid +
-                    ", age=" + age +
-                    ", studentyear=" + studentyear +
+                    "student Name='" + studentName + '\'' +
+                    ", student Lastname='" + studentLastname + '\'' +
+                    ", course ='" + course + '\'' +
+                    ", student id =" + studentId +
+                    ", age =" + age +
+                    ", student year =" + studentYear +
                     '}';
         }
     }
