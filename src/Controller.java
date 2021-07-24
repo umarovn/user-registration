@@ -9,6 +9,7 @@ public class Controller {
     public void run() {
         while(true) {
             register();
+            printUsers();
         }
     }
 
@@ -23,4 +24,11 @@ public class Controller {
         User user = new User(email, password);
         users.add(user);
     }
+
+    private void printUsers(){
+        for (User user:users) {
+            System.out.println(user);
+        }
+    }
+
 }

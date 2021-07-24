@@ -1,16 +1,17 @@
-public class Student {
+public class Student extends User{
         private String studentName;
         private String studentLastname;
         private String course;
-        private Long studentid;
+        private Long studentId;
         private Integer age;
         private Integer studentyear;
 
-        public Student(String studentName, String studentLastname, String course, Long studentid, Integer age, Integer studentyear) {
+        public Student(String studentName,String studentLastname,String course,Long studentId,Integer age,Integer studentyear,String email,String password){
+            super(email,password);
             this.studentName = studentName;
             this.studentLastname = studentLastname;
             this.course = course;
-            this.studentid = studentid;
+            this.studentId = studentId;
             this.age = age;
             this.studentyear = studentyear;
         }
@@ -41,11 +42,11 @@ public class Student {
         }
 
         public Long getStudentid() {
-            return studentid;
+            return studentId;
         }
 
         public void setStudentid(Long studentid) {
-            this.studentid = studentid;
+            this.studentId = studentid;
         }
 
         public Integer getAge() {
@@ -70,7 +71,7 @@ public class Student {
                     "studentName='" + studentName + '\'' +
                     ", studentLastname='" + studentLastname + '\'' +
                     ", course='" + course + '\'' +
-                    ", studentid=" + studentid +
+                    ", studentid=" + studentId +
                     ", age=" + age +
                     ", studentyear=" + studentyear +
                     '}';
