@@ -1,4 +1,4 @@
-public class Student {
+public class Student extends User {
         private String studentName;
         private String studentLastname;
         private String course;
@@ -6,17 +6,21 @@ public class Student {
         private Integer age;
         private Integer studentyear;
 
-        public Student(String studentName, String studentLastname, String course, Long studentid, Integer age, Integer studentyear) {
-            this.studentName = studentName;
-            this.studentLastname = studentLastname;
-            this.course = course;
-            this.studentid = studentid;
-            this.age = age;
-            this.studentyear = studentyear;
-        }
+    public Student(String email, String password) {
+        super(email, password);
+    }
 
+    public Student(String email, String password, String studentName, String studentLastname, String course, Long studentid, Integer age, Integer studentyear) {
+        super(email, password);
+        this.studentName = studentName;
+        this.studentLastname = studentLastname;
+        this.course = course;
+        this.studentid = studentid;
+        this.age = age;
+        this.studentyear = studentyear;
+    }
 
-        public String getStudentName() {
+    public String getStudentName() {
             return studentName;
         }
 
