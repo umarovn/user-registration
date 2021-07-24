@@ -9,7 +9,9 @@ public class Controller {
     public void run() {
         while(true) {
             register();
-            print();
+
+            printUsers();
+
         }
     }
 
@@ -25,9 +27,11 @@ public class Controller {
         users.add(user);
     }
 
-    private  void print(){
-        System.out.println(users);
 
+
+    private void printUsers() {
+        for (User user : users) {
+            System.out.println(user);
+        }
     }
-
 }
