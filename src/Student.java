@@ -18,7 +18,17 @@ public class Student extends User {
         }
 
 
-        public String getStudentName() {
+    public Student(String email, String password, String studentName, String studentLastname, String course, Long studentid, Integer age, Integer studentyear) {
+        super(email, password);
+        this.studentName = studentName;
+        this.studentLastname = studentLastname;
+        this.course = course;
+        this.studentid = studentid;
+        this.age = age;
+        this.studentyear = studentyear;
+    }
+
+    public String getStudentName() {
             return studentName;
         }
 

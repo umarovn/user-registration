@@ -25,7 +25,9 @@ public class Controller {
         users.add(user);
     }
 
-    private void print(){
+    private  void print(){
         System.out.println(users);
+
     }
+
 }
